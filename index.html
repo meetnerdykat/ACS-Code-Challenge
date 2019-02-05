@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+      integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
+      crossorigin="anonymous"
+    />
+    <title>ACS Code Challenge</title>
+    <style>
+      body {
+        background: #343a40 !important;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- HTML - What the user will see -->
+    <div class="container p-4">
+      <main role="main" class="text-center text-white mb-5">
+        <h1 class="cover-heading">ACS Code Challenge</h1>
+        <p class="lead">
+          The following is how I tackled this problem.
+        </p>
+        <!-- end of main -->
+      </main>
+
+      <div class="row">
+        <div class="col-sm-12 mb-5">
+          <button id="getTests" class="btn btn-info mb-4">
+            Get Test Data
+          </button>
+          <div id="outputTests" class="text-white"></div>
+        </div>
+
+        <div class="col-sm-12 mb-5">
+          <button id="getPanels" class="btn btn-info">
+            Get Panel Data
+          </button>
+          <div id="outputPanels" class="text-white"></div>
+        </div>
+      </div>
+
+    <script>
+      // event listeners
+      document.getElementById('getTests').addEventListener('click', getTests);
+      document.getElementById('getPanels').addEventListener('click', getPanels);
+
+      // getTests function
+      function getTests() {
+        fetch('http://challenge.acslabtest.com/api/lab/tests')
+          .then(response => response.json())
+          .then(data => {
+            let output = '<h2>Test Data</h2>';
+            data.forEach(function(test) {
+              output += `
+              <ul>
+                <li>id: ${test.id}</li>
+                <li>name: ${test.name}</li>
+                <li>alias: ${test.alias}</li>
+                <li>abbreviation: ${test.abbreviation}</li>
+                <li>identifier: ${test.identifier}</li>
+                <li>low_value: ${test.low_value}</li>
+                <li>high_value: ${test.high_value}</li>
+                <li>panel_id: ${test.panel_id}</li>
+                <li>created_at: ${test.created_at}</li>
+                <li>updated_at: ${test.updated_at}</li>
+              </ul>
+              `;
+            });
+            document.getElementById('outputTests').innerHTML = output;
+          });
+      }
+
+      // getPanels function
+      function getPanels() {
+        fetch('http://challenge.acslabtest.com/api/lab/panels')
+          .then(response => response.json())
+          .then(data => {
+            let output = '<h2>Associated Panel</h2>';
+            data.forEach(function(panel) {
+              output += `
+              <ul>
+                <li>id: ${panel.id}</li>
+                <li>name: ${panel.name}</li>
+                <li>alias: ${panel.alias}</li>
+                <li>abbreviation: ${panel.abbreviation}</li>
+                <li>identifier: ${panel.identifier}</li>
+                <li>description: ${panel.description}</li>
+                <li>created_at: ${panel.created_at}</li>
+                <li>updated_at: ${panel.updated_at}</li>
+              </ul>
+              `;
+            });
+            document.getElementById('outputPanels').innerHTML = output;
+          });
+      }
+    </script>
+  </body>
+</html>

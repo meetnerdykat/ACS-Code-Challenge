@@ -1,0 +1,42 @@
+[
+  {
+    "id": 1,
+    "name": "Vitamins",
+    "alias": "vitamins",
+    "abbreviation": "Vit",
+    "identifier": "v1",
+    "description": "Vitamins Panel",
+    "created_at": "2019-01-31 16:17:53",
+    "updated_at": "2019-01-31 16:17:53"
+  },
+  {
+    "id": 2,
+    "name": "Hormones",
+    "alias": "hormones",
+    "abbreviation": "Hor",
+    "identifier": "hor",
+    "description": "Hormones Panel",
+    "created_at": "2019-01-31 16:17:53",
+    "updated_at": "2019-01-31 16:17:53"
+  },
+  {
+    "id": 3,
+    "name": "Amino Acids",
+    "alias": "amino-acids",
+    "abbreviation": "AA",
+    "identifier": "aa",
+    "description": "Amino Acids Panel",
+    "created_at": "2019-01-31 16:17:53",
+    "updated_at": "2019-01-31 16:17:53"
+  },
+  {
+    "id": 4,
+    "name": "Fatty Acids",
+    "alias": "fatty-acids",
+    "abbreviation": "FA",
+    "identifier": "fa",
+    "description": "Fatty Acids Panel",
+    "created_at": "2019-01-31 16:17:53",
+    "updated_at": "2019-01-31 16:17:53"
+  }
+]

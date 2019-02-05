@@ -1,0 +1,21 @@
+EXTRA:
+After working with the API and getting the data to show, come up with a list of ways that you could improve this API. What would make it more efficient for future calls? How could you structure the return better?
+
+Q: What would make it more efficient for future calls? 
+A: Implementing a way to catch errors
+
+Q: How could you structure the return better?
+A1: By improving the design of the UI in the following ways:
+  - displaying the data on a card rather than on columns as it is now
+  - giving the user the ability to expand & collapse the information when they 
+    click to display the data
+A2: Implementing a login system, adding validation & authentication so that not 
+    just any random person has access to the information
+
+ADDITIONAL NOTES:
+I first used curl in the terminal to get the data from the api, 
+then copied and pasted the code into the files labeled as such 
+(tests.json and assoc_panel.json)
+ 
+
+ 
