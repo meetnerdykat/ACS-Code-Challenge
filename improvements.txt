@@ -1,3 +1,6 @@
+NOTE: 
+Thank you for the opportunity to take this test. It was a great challenge that I very much enjoyed overcoming!
+
 EXTRA:
 After working with the API and getting the data to show, come up with a list of ways that you could improve this API. What would make it more efficient for future calls? How could you structure the return better?
 
